@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
-#employee_taskList::-webkit-scrollbar{
+
+
+
+.remove_scollbar::-webkit-scrollbar{
     display: none;
 }

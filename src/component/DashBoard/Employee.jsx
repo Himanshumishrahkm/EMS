@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Employee = () => {
   return (
@@ -26,7 +25,7 @@ const Employee = () => {
 
       </div>
 
-    <div id="employee_taskList" className="p-2.5 flex items-center overflow-x-auto  gap-3 h-80 w-full">
+    <div className="remove_scollbar p-2.5 flex items-center overflow-x-auto  gap-3 h-80 w-full">
         <div className="h-[100%] shrink-0 bg-blue-300 w-1/4 flex flex-col gap-3 items-center">
           <h2 className="text-2xl font-light text-black">10-june-2026</h2> 
           <h1 className="text-3xl mt-3 mb-3 font-extrabold text-black">Making a Project</h1>
@@ -35,8 +34,6 @@ const Employee = () => {
 
           
         </div>
-
-
    
     </div>
     </>
