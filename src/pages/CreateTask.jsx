@@ -7,20 +7,20 @@ const CreateTask = () => {
             <div className=' flex flex-col justify-center items-center h-full gap-4 w-1/2'>
             <div>
             <h1 className='font-extralight text-1xl text-white mb-1'>Task Title</h1>
-            <input className='h-10 pl-1 w-120 text-2xl text-white placeholder:text-2xl border-2 outline-none bg-transparent' type="text" placeholder='Eg. make a Sample pattern' />
+            <input className='h-10 pl-1 w-120 text-1xl text-white placeholder:text-1xl border-2 outline-none bg-transparent' type="text" placeholder='Eg. make a Sample pattern' />
             </div>
 
             <div>
             <h1 className='font-extralight text-1xl text-white mb-1'>Date</h1>
-            <input className='h-10 pl-1 w-120 text-2xl text-white placeholder:text-2xl border-2 outline-none bg-transparent' type="Date" placeholder='Date'/>
+            <input className='h-10 pl-1 w-120 text-1xl text-white placeholder:text-1xl border-2 outline-none bg-transparent' type="Date" placeholder='Date'/>
             </div>
             <div>
             <h1 className='font-extralight text-1xl text-white mb-1'>Assign To</h1>
-            <input className='h-10 pl-1 w-120 text-2xl text-white placeholder:text-2xl border-2 outline-none bg-transparent' type="text" placeholder='Your Employee name' />
+            <input className='h-10 pl-1 w-120 text-1xl text-white placeholder:text-1xl border-2 outline-none bg-transparent' type="text" placeholder='Your Employee name' />
             </div>
             <div>
             <h1 className='font-extralight text-1xl text-white mb-1'>Category</h1>
-            <input className='h-10 pl-1 w-120 text-2xl text-white placeholder:text-2xl border-2 outline-none bg-transparent' type="text" placeholder='Design , Development' />
+            <input className='h-10 pl-1 w-120 text-1xl text-white placeholder:text-1xl border-2 outline-none bg-transparent' type="text" placeholder='Design , Development' />
             </div>
             </div>
             <div className='h-full w-1/2 flex flex-col justify-center items-center'>
