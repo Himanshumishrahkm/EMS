@@ -1,26 +1,30 @@
 import Header from "../../pages/Header"
 
-const Employee = () => (
+const Employee = ({data}) => (
+  
   <>
-    <Header />
+   
+   
+   
+    <Header data = {data.firstName}/>
     <div className="p-2.5 flex items-center gap-3 h-70 w-full">
       <div className="h-[80%] bg-green-300 w-1/4 flex flex-col justify-center gap-3 items-center">
-        <h1 className="text-5xl text-black">0</h1>
+        <h1 className="text-5xl text-black">{data.taskCount.newTask}</h1>
         <h1 className="text-5xl text-black">New Task</h1>
       </div>
 
       <div className="h-[80%] bg-gray-400 w-1/4 flex flex-col justify-center gap-3 items-center">
-        <h1 className="text-5xl text-black">3</h1>
+        <h1 className="text-5xl text-black">{data.taskCount.completed}</h1>
         <h1 className="text-5xl text-black">Complete</h1>
       </div>
 
       <div className="h-[80%] bg-purple-300 w-1/4 flex flex-col justify-center gap-3 items-center">
-        <h1 className="text-5xl text-black">0</h1>
+        <h1 className="text-5xl text-black">{data.taskCount.accepted}</h1>
         <h1 className="text-5xl text-black">Accepted</h1>
       </div>
 
       <div className="h-[80%] bg-cyan-600 w-1/4 flex flex-col justify-center gap-3 items-center">
-        <h1 className="text-5xl text-black">0</h1>
+        <h1 className="text-5xl text-black">{data.taskCount.failed}</h1>
         <h1 className="text-5xl text-black">Failed</h1>
       </div>
 
@@ -40,6 +44,8 @@ const Employee = () => (
 
     </div>
   </>
+  
+  
 )
 
 export default Employee

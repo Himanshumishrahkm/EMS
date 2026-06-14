@@ -9,10 +9,17 @@ import AuthProvider, { AuthContext } from "./Context/AuthProvider";
 
 const App = () => {
 
-    const data = useContext(AuthContext);
+    const AuthData = useContext(AuthContext);
     
+   const {employees,admin} = AuthData;
+   
+ 
     
     const [user, setUser] = useState(null)
+    const [UserLog, setUserLog] = useState()
+
+    
+    
     
     
     const handleLogin = (email,password)=>{
@@ -20,9 +27,27 @@ const App = () => {
       {
         setUser('admin')
       }
-      else if(email = 'employee@123' && password == 123)
+      else if(AuthData)
       {
-        setUser('Employee');
+        const em_data = employees.find((e)=> e.email === email && e.password === password)
+        if(em_data)
+        {
+          
+          
+          setUser('Employee');
+          setUserLog(em_data);
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        }
+       
+        
       }
       else
       {
@@ -32,10 +57,10 @@ const App = () => {
   
   return (
    <>
-
+    
       
     {!user ? <Login handleLogin = {handleLogin}  /> : ''}
-    {user == 'admin' ? <Admin/> : <Employee/>}
+    {user == 'admin' ? <Admin/> : ((UserLog) ? <Employee data={UserLog}/> : null)}
       
 
     </>

@@ -1,12 +1,23 @@
-import  { createContext } from 'react'
+import  { createContext, useEffect, useState } from 'react'
+import { GetLocalStorage, SetLocalStorage } from '../utils/LocalStorage';
 export const AuthContext = createContext();
+
 const AuthProvider = ({children}) => {
+  const [UserData, setUserData] = useState({})
+  useEffect(() => {
+
+    const {employees,admin} = GetLocalStorage();
+    setUserData({employees,admin});
+
+  }, [])
+  
   return (
-    <div>
-      <AuthContext.Provider value={"Himanshu"}>
+
+    
+      <AuthContext.Provider value={UserData}>
       {children}
       </AuthContext.Provider>
-    </div>
+    
   )
 }
 
